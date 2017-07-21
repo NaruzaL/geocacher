@@ -3,6 +3,6 @@ body {
   background-size: cover;
 }
 
-h1  {
+h1, p  {
   background-color: skyblue;
 }

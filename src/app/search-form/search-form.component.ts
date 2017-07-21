@@ -10,13 +10,22 @@ import { Observable } from 'rxjs/Observable';
 })
 export class SearchFormComponent {
   locations: any[];
+  address: string;
 
   constructor(private geocoding: GeocodingApiService) { }
 
   getLocationByCoordinates(lat:string, lng:string) {
     this.geocoding.getByLatAndLng(lat, lng).subscribe(response => {
-      this.locations = response.json().results;
-      console.log(response.json())
+      this.address = response.json().results[0].formatted_address;
+      console.log(response.json().results[0].formatted_address)
+    })
+  }
+
+  getLocationByAddress(streetNumber:string, route: string, locality: string, admnArea: string) {
+    this.geocoding.getByAddress(streetNumber, route, locality, admnArea).subscribe(response => {
+      this.locations = response.json().results[0].geometry.location;
+      console.log(response.json().results[0].geometry.location.lat)
+      console.log(response.json().results[0].geometry.location.lng)
     })
   }
 

@@ -5,33 +5,34 @@
   <form>
     <div class="form-group">
       <label for="lat">Lattitude</label>
-      <input type="number" #lat>
+      <input type="text" #lat placeholder="44.574630">
     </div>
     <div class="form-group">
       <label for="lng">Longitude</label>
-      <input type="number" #lng>
+      <input type="text" #lng placeholder="-123.279240">
     </div>
   </form>
-  <button (click)="getLocationByCoordinates(lat.value, lng.value)">Find location</button>
+  <button (click)="getLocationByCoordinates(lat.value, lng.value)">Find location by coordinates</button>
 </div>
 <div class="addressForm">
   <form>
   <div class="form-group">
-    <label for="lat">Lattitude</label>
-    <input type="number" #lat>
+    <label for="streetNumber">Street Number</label>
+    <input type="text" #streetNumber placeholder="2305">
   </div>
   <div class="form-group">
-    <label for="lng">Longitude</label>
-    <input type="number" #lng>
+    <label for="route">Route</label>
+    <input type="text" #route placeholder="Taylor st">
   </div>
   <div class="form-group">
-    <label for="lat">Lattitude</label>
-    <input type="number" #lat>
+    <label for="locality">Locality</label>
+    <input type="text" #locality placeholder="Corvallis">
   </div>
   <div class="form-group">
-    <label for="lng">Longitude</label>
-    <input type="number" #lng>
+    <label for="admnArea">State</label>
+    <input type="text" #admnArea placeholder="OR">
   </div>
 </form>
-<button (click)="getLocationByCoordinates(lat.value, lng.value)">Find location</button>
+<button (click)="getLocationByAddress(streetNumber.value, route.value, locality.value, admnArea.value)">Find location by address</button>
 </div>
+<app-result-page [childLocations] ="locations" [childAddress] = "address"></app-result-page>
