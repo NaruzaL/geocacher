@@ -1,38 +1,47 @@
-<div id="map">
+<div class="map">
   <p>Note that locations with a <strong>west</strong> or <strong>south</strong> coordinate will be negative(-)</p>
 </div>
-<div class="latLngForm">
-  <form>
+<div class="container">
+  <div class="latLngForm">
+    <form>
+      <div class="form-group">
+        <label for="lat">Lattitude</label>
+        <input type="text" #lat placeholder="44.574630">
+      </div>
+      <div class="form-group">
+        <label for="lng">Longitude</label>
+        <input type="text" #lng placeholder="-123.279240">
+      </div>
+    </form>
+    <button (click)="getLocationByCoordinates(lat.value, lng.value)">Find location by coordinates</button>
+  </div>
+  <div class="addressForm">
+    <form>
     <div class="form-group">
-      <label for="lat">Lattitude</label>
-      <input type="text" #lat placeholder="44.574630">
+      <label for="streetNumber">Street Number</label>
+      <input type="text" #streetNumber placeholder="2503">
     </div>
     <div class="form-group">
-      <label for="lng">Longitude</label>
-      <input type="text" #lng placeholder="-123.279240">
+      <label for="route">Route</label>
+      <input type="text" #route placeholder="Taylor st">
+    </div>
+    <div class="form-group">
+      <label for="locality">Locality</label>
+      <input type="text" #locality placeholder="Corvallis">
+    </div>
+    <div class="form-group">
+      <label for="admnArea">State</label>
+      <input type="text" #admnArea placeholder="OR">
     </div>
   </form>
-  <button (click)="getLocationByCoordinates(lat.value, lng.value)">Find location by coordinates</button>
+  <button (click)="getLocationByAddress(streetNumber.value, route.value, locality.value, admnArea.value)">Find location by address</button>
+  </div>
 </div>
-<div class="addressForm">
-  <form>
-  <div class="form-group">
-    <label for="streetNumber">Street Number</label>
-    <input type="text" #streetNumber placeholder="2305">
+<div class="results">
+  <div *ngIf="locations">
+    <app-result-page [childLocations] ="locations"></app-result-page>
   </div>
-  <div class="form-group">
-    <label for="route">Route</label>
-    <input type="text" #route placeholder="Taylor st">
+  <div *ngIf="address">
+    <app-address-result [childAddress] = "address"></app-address-result>
   </div>
-  <div class="form-group">
-    <label for="locality">Locality</label>
-    <input type="text" #locality placeholder="Corvallis">
-  </div>
-  <div class="form-group">
-    <label for="admnArea">State</label>
-    <input type="text" #admnArea placeholder="OR">
-  </div>
-</form>
-<button (click)="getLocationByAddress(streetNumber.value, route.value, locality.value, admnArea.value)">Find location by address</button>
 </div>
-<app-result-page [childLocations] ="locations" [childAddress] = "address"></app-result-page>

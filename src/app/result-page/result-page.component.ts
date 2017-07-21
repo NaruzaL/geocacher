@@ -8,7 +8,7 @@ import { Coord } from '../coord.model';
 })
 export class ResultPageComponent {
   @Input() childLocations;
-  @Input() childAddress;
+
   constructor() { }
 
   ngOnInit() {

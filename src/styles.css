@@ -1,8 +1,52 @@
 body {
   background-image: url(/src/map.jpg);
-  background-size: cover;
+  background-size: auto;
 }
 
 h1, p  {
   background-color: skyblue;
+  width: 36%;
+  text-align: center;
+}
+
+.map {
+  margin-left: 38%;
+}
+
+#title {
+  margin-left: 32%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.latLngForm {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin-top: 35px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.3);
+  height: 110px;
+}
+
+.addressForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.3);
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.3);
 }

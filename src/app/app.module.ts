@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { ResultPageComponent } from './result-page/result-page.component';
 import { GeocodingApiService } from './geocoding-api.service';
+import { AddressResultComponent } from './address-result/address-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchFormComponent,
-    ResultPageComponent
+    ResultPageComponent,
+    AddressResultComponent
   ],
   imports: [
     BrowserModule,

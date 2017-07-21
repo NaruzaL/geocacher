@@ -10,8 +10,8 @@ import { Coord } from '../coord.model';
   providers: [GeocodingApiService]
 })
 export class SearchFormComponent {
-  locations: any[];
-  address: string;
+  locations: any[]=null;
+  address: string = null;
 
   constructor(private geocoding: GeocodingApiService) { }
 
