@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GeocodingApiService } from "../geocoding-api.service";
 import { Observable } from 'rxjs/Observable';
+import { Coord } from '../coord.model';
 
 @Component({
   selector: 'app-search-form',
