@@ -1,28 +1,39 @@
-# Geocacher
+# Geocache app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+####  Week 4 JavaScript independent project for Epicodus, July 21th, 2017
 
-## Development server
+#### By **Pete Lazuran**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
+This app allows the user to search for locations via latitude and longitude or street address.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Setup/Installation Requirements
 
-## Build
+#### _**Replicating this Project**_
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+  * In the terminal enter "git clone https://github.com/NaruzaL/geocacher.git".
+  * Navigate to this project's folder in your terminal and enter "npm install".
+  * You'll need to create an "api-keys.ts" file in the "app" folder in order to use the application.
+  * Navigate to https://developers.google.com/maps/documentation/geocoding/start and sign in with your gmail account.
+  * Near the bottom of the page under Authentication, quotas, and policies there's an option to "Get A Key".
+  * In the api-keys.ts type ** _export var geoKey =""_** and copy your key inside the quotes.
+  * In the .gitignore file make sure that /src/app/api-keys.ts is one of the files listed.
 
-## Running unit tests
+## Known bugs
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  * No Known Bugs
 
-## Running end-to-end tests
+## Support and contact details
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+ Contact pdlazuran@gmail.com with any comments or questions.
 
-## Further help
+## Technologies Used
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ _HTML, CSS, Bootstrap, JavaScript, Angular 2, Angular CLI, Geocoding API _
+
+### License
+
+ MIT
+
+ Copyright (c) 2017 **_Pete Lazuran_**

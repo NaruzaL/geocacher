@@ -44,3 +44,6 @@ Thumbs.db
 # dependencies
 /node_modules
 /bower_components
+
+#Firebase and API credentials
+/src/app/api-keys.ts
