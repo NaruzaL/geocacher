@@ -13,9 +13,10 @@ export class SearchFormComponent {
 
   constructor(private geocoding: GeocodingApiService) { }
 
-  getLocationByCoordinates(lat:number, lng:number) {
-    this.geocoding.getByLatAndLng(lat, lng).subscirbe(response => {
-      this.locations = response.json().results[0];
+  getLocationByCoordinates(lat:string, lng:string) {
+    this.geocoding.getByLatAndLng(lat, lng).subscribe(response => {
+      this.locations = response.json().results;
+      console.log(response.json())
     })
   }
 

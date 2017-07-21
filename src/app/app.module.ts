@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { ResultPageComponent } from './result-page/result-page.component';
+import { GeocodingApiService } from './geocoding-api.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { ResultPageComponent } from './result-page/result-page.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [GeocodingApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

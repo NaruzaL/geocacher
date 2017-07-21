@@ -1,4 +1,37 @@
-<div *ngFor="let location of locations">
-  <li>{{location.formatted_address}}</li>
+<div id="map">
+  <p>Note that locations with a <strong>west</strong> or <strong>south</strong> coordinate will be negative(-)</p>
 </div>
-<button (click)="GetSenatorList()">Get All Senators</button>
+<div class="latLngForm">
+  <form>
+    <div class="form-group">
+      <label for="lat">Lattitude</label>
+      <input type="number" #lat>
+    </div>
+    <div class="form-group">
+      <label for="lng">Longitude</label>
+      <input type="number" #lng>
+    </div>
+  </form>
+  <button (click)="getLocationByCoordinates(lat.value, lng.value)">Find location</button>
+</div>
+<div class="addressForm">
+  <form>
+  <div class="form-group">
+    <label for="lat">Lattitude</label>
+    <input type="number" #lat>
+  </div>
+  <div class="form-group">
+    <label for="lng">Longitude</label>
+    <input type="number" #lng>
+  </div>
+  <div class="form-group">
+    <label for="lat">Lattitude</label>
+    <input type="number" #lat>
+  </div>
+  <div class="form-group">
+    <label for="lng">Longitude</label>
+    <input type="number" #lng>
+  </div>
+</form>
+<button (click)="getLocationByCoordinates(lat.value, lng.value)">Find location</button>
+</div>
