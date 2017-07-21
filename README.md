@@ -5,7 +5,7 @@
 #### By **Pete Lazuran**
 
 ## Description
-This app allows the user to search for locations via latitude and longitude or street address.
+This app allows the user to search for locations via latitude and longitude or street address. Searching by one location identity will return the other. (i.e - searching by address will return latitude/longitude coordinates and vice versa)
 
 
 ## Setup/Installation Requirements
